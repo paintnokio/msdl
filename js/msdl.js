@@ -34,11 +34,11 @@ function langJsonStrToHTML(jsonStr) {
     let container = document.createElement('div');
 
     let header = document.createElement('h2');
-    header.textContent = "Select the product language";
+    header.textContent = "Pilih bahasa produk";
     container.appendChild(header);
 
     let info = document.createElement('p');
-    info.innerHTML = "You'll need to choose the same language when you install Windows. To see what language you're currently using, go to <strong>Time and language</strong> in PC settings or <strong>Region</strong> in Control Panel.";
+    info.innerHTML = "Anda harus memilih bahasa yang sama saat menginstal Windows. Untuk melihat bahasa yang sedang Anda gunakan, kunjungi <strong>Waktu dan bahasa</strong> dalam pengaturan PC atau <strong>Wilayah</strong> di Control Panel.";
     container.appendChild(info);
 
     let select = document.createElement('select');
@@ -46,8 +46,8 @@ function langJsonStrToHTML(jsonStr) {
 
     let defaultOption = document.createElement('option');
     defaultOption.value = "";
-    defaultOption.selected = "selected";
-    defaultOption.textContent = "Choose one";
+    defaultOption.selected = "terpilih";
+    defaultOption.textContent = "Pilih Satu";
     select.appendChild(defaultOption);
 
     json.Skus.forEach(sku => {
@@ -61,7 +61,7 @@ function langJsonStrToHTML(jsonStr) {
 
     let button = document.createElement('button');
     button.id = "submit-sku";
-    button.textContent = "Submit";
+    button.textContent = "Kirim";
     button.disabled = true;
     button.setAttribute("onClick", "getDownload();");
 
@@ -125,7 +125,7 @@ function onDownloadsXhrChange() {
             msContent.appendChild(br);
         });
     } else {
-        msContent.innerHTML = "<p>No download options available.</p>";
+        msContent.innerHTML = "<p>Tidak ada pilihan pengunduhan yang tersedia.</p>";
     }
 }
 

@@ -21,3 +21,7 @@
 #use-shared-session {
     display: none;
 }
+
+.warning { background-color: #fff3cd; padding: 10px; }
+.quick-actions { display: flex; gap: 10px; margin-top: 10px; }
+.table-responsive { overflow-x: auto; }
